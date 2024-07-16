@@ -13,6 +13,8 @@ jobs:
 
       - name: Remove extra software
         run: |
+          # 取消 set -e 的设置
+          set +e
           sudo apt-get purge -y gfortran-9 gfortran-10
           sudo apt-get purge -y clang-10 lldb-10 lld-10
           sudo apt-get purge -y clang-12 lldb-12 lld-12
